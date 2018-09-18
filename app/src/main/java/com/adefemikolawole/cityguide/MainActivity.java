@@ -36,10 +36,13 @@ public class MainActivity extends ListActivity{
                 startActivity(new Intent(ACTION_VIEW, Uri.parse("http://themagnifientmile.com")));
                 break;
             case 2:
+                startActivity(new Intent(MainActivity.this, Willis.class));
                 break;
             case 3:
+                startActivity(new Intent(MainActivity.this, Pier.class));
                 break;
             case 4:
+                startActivity(new Intent(MainActivity.this, Water.class));
                 break;
         }
 
