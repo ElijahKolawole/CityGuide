@@ -13,12 +13,12 @@ public class MainActivity extends AppCompatActivity {
 
 
         try {
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
+           // getSupportActionBar().setDisplayShowHomeEnabled(true);
         } catch (Exception e) {
             e.printStackTrace();
         }
-        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
-        getSupportActionBar().setDisplayUseLogoEnabled(true);
+      //  getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+      //  getSupportActionBar().setDisplayUseLogoEnabled(true);
 
     }
 
