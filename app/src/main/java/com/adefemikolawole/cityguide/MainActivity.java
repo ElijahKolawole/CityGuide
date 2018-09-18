@@ -1,25 +1,47 @@
 package com.adefemikolawole.cityguide;
 
+import android.app.ListActivity;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
-public class MainActivity extends AppCompatActivity {
+import static android.content.Intent.ACTION_VIEW;
+
+public class MainActivity extends ListActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        String [] attraction = {"Art Institute of Chicago", "Magnificent Mile", "Willis Tower", "Navy Pier", "Water Tower"};
+        setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_main,  R.id.travel, attraction));
 
-        try {
-           // getSupportActionBar().setDisplayShowHomeEnabled(true);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-      //  getSupportActionBar().setLogo(R.mipmap.ic_launcher);
-      //  getSupportActionBar().setDisplayUseLogoEnabled(true);
+
 
     }
 
+
+   protected void onListItemCLick(ListView l, View v , int position, long id){
+        switch (position){
+
+            case 0:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://artic.edu")));
+                break;
+            case 1:
+                startActivity(new Intent(ACTION_VIEW, Uri.parse("http://themagnifientmile.com")));
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+        }
+
+   }
 }
