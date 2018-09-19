@@ -8,12 +8,13 @@
 
 
     <ImageView
+        android:id="@+id/imgPier"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="@string/willis"
-        android:id="@+id/imgPier"
-        android:src="@drawable/pier"
         android:layout_margin="8dp"
-        />
+        android:contentDescription="@string/willis"
+        android:src="@drawable/pier"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 </android.support.constraint.ConstraintLayout>

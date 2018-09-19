@@ -3,9 +3,11 @@ package com.adefemikolawole.cityguide;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.view.Menu;
+import android.view.MenuItem;
+import  android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -16,24 +18,24 @@ public class MainActivity extends ListActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
 
-        String [] attraction = {"Art Institute of Chicago", "Magnificent Mile", "Willis Tower", "Navy Pier", "Water Tower"};
-        setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_main,  R.id.travel, attraction));
-
+        String[] attraction = {"Art Institute of Chicago", "Magnificent Mile", "Willis Tower", "Navy Pier", "Water Tower"};
+        // setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, attraction));
+        setListAdapter(new ArrayAdapter<String>(this, R.layout.activity_main, R.id.travel, attraction));
 
 
     }
 
 
-   protected void onListItemCLick(ListView l, View v , int position, long id){
+   protected void onListItemClick    (ListView i, View v , int position, long id){
         switch (position){
 
             case 0:
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://artic.edu")));
                 break;
             case 1:
-                startActivity(new Intent(ACTION_VIEW, Uri.parse("http://themagnifientmile.com")));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://themagnificentmile.com")));
                 break;
             case 2:
                 startActivity(new Intent(MainActivity.this, Willis.class));
